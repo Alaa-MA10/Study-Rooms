@@ -1,0 +1,60 @@
+{% extends 'main.html' %}
+
+{% block content %} 
+
+<main class="layout layout--3">
+  <div class="container">
+
+    <!-- Topics Start -->
+
+    {% include 'base/topics_component.html' %}
+    
+    <!-- Topics End -->
+
+    <!-- Room List Start -->
+    <div class="roomList">
+
+      <div class="mobile-menu">
+
+        <form action="{% url 'home' %}" method="GET" class="header__search">
+          <label>
+            <i class="bi bi-search" title="Search"></i>
+            <input name="q" placeholder="Search for rooms.." />
+          </label>
+        </form>
+
+        <div class="mobile-menuItems">
+          <a class="btn btn--main btn--pill" href="{% url 'topics' %}">Browse Topics</a>
+          <a class="btn btn--main btn--pill" href="{% url 'activity' %}">Recent Activities</a>
+        </div>
+
+      </div>
+
+      <div class="roomList__header">
+
+        <div>
+          <h2>Study Room</h2>
+          <p>{{rooms.count}} Rooms available</p>
+        </div>
+
+        <a class="btn btn--main" href="{% url 'create-room' %}">
+          <i class="bi bi-plus-lg" title="add"></i>
+          Create Room
+        </a>
+
+      </div>
+
+      {% include 'base/feed_component.html' %}
+
+    </div>
+    <!-- Room List End -->
+
+    <!-- Activities Start -->
+
+    {% include 'base/activity_component.html' %}
+    
+    <!-- Activities End -->
+  </div>
+</main>
+{% endblock content %} 
+

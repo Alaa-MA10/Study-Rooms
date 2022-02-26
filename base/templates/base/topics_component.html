@@ -1,0 +1,35 @@
+
+<div class="topics">
+
+    <div class="topics__header">
+        <h2>Browse Topics</h2>
+    </div>
+
+    <ul class="topics__list">
+        <li>
+            <a href="{% url 'home' %}" {% if request.get_full_path == '/' %} class ='active' {% endif %} >
+                All <span>{{topics.count}}</span></a>
+        </li>
+
+        <!-- use (|slice) to display 5-topics -->
+        {% for topic in topics|slice:":5" %}
+
+        <!-- <p>{{url_name|slice:"8:"}}</p>
+        <p>{{request.get_full_path|slice:"4:"}}</p> -->
+        <!-- <p>/?q={{topic.name|urlencode}}</p> -->
+        <li>
+            <a href="{% url 'home' %}?q={{topic.name|urlencode}} "
+             {% if request.get_full_path|slice:"4:" == topic.name|urlencode %} class ='active' {% endif %}>
+                {{topic.name}}<span>{{topic.room_set.all.count}}</span></a>
+        </li>
+
+        {% endfor%}
+        
+    </ul>
+
+    <a class="btn btn--link" href="{% url 'topics' %}">
+        More
+        <i class="bi bi-chevron-down"></i>
+    </a>
+
+</div>  
