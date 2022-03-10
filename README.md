@@ -11,14 +11,14 @@
 <td width="50%">   
 <br/>   
 <p align="center">
-  Feed Home
+  Home
 </p>
 <img src="./images/home-screenshot.png" alt="Study Rooms app Home-screenshot">
 </td> 
 <td width="50%">
 <br/>
 <p align="center">
-  Room Conversation Preview
+  Room Conversation
 </p>
 <img src="./images/room-screenshot.png" alt="Study Rooms app Room-screenshot">  
 </td>
