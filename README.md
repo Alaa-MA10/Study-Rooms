@@ -6,7 +6,24 @@
  <hr/>
 </div>
 
-
+ <table width="100%"> 
+<tr>
+<td width="50%">   
+<br/>   
+<p align="center">
+  Feed Home
+</p>
+<img src="./images/home-screenshot.png" alt="Study Rooms app Home-screenshot">
+</td> 
+<td width="50%">
+<br/>
+<p align="center">
+  Room Conversation Preview
+</p>
+<img src="./images/room-screenshot.png" alt="Study Rooms app Room-screenshot">  
+</td>
+</table>
+ 
  Project made in Python and the Django framework
 
 ### Running the App
